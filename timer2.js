@@ -17,4 +17,13 @@ process.stdin.on('data', (key) => {
   if(key === 'b') {
     beep();
   }
+
+  if((Number(key) > 0)) {
+    if(key >= 1 && key <= 10) {
+      process.stdout.write(`setting timer for ${key} seconds...\n`);
+      setTimeout(() => {
+        beep()
+      }, key * 1000);
+    }
+  }
 });
