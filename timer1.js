@@ -9,6 +9,7 @@ args.sort((a, b) => a - b);
 args.forEach(e => {
   time = e * 1000;
   setTimeout(() => {
-    process.stdout.write('BEEP\n');
+    process.stdout.write('\x07');
+    process.stdout.write('beep\n');
   }, time);
 });
