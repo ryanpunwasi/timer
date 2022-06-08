@@ -2,7 +2,7 @@ let args = process.argv.slice(2);
 let time = 0;
 
 args = args.filter((e) => {
-  return e > 0 && Number.isInteger(Number(e));
+  return Number(e) > 0;
 });
 args.sort((a, b) => a - b);
 
